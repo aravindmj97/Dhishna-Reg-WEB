@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Dhishna Registration Beta</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+</head>
+<body>
+<label>
+    Enter Qrreg: 
+    <input id="regqr" />
+</label>
+<br />
+<label>
+    Enter age: 
+    <input id="age" />
+</label>
+<br />
+<label>
+    Enter location: 
+    <input id="location" />
+</label>
+<br />
+<input type="checkbox" name="event" value="1">Coding<br />
+                                    <input type="checkbox" name="event" value="2">Gaming<br />
+                                    <input type="checkbox" name="event" value="3">Quiz<br />
+                                    <input type="checkbox" name="event" value="4">Puzzle<br />
+                                    <input type="checkbox" name="event" value="5">War<br />
+                                    <input type="checkbox" name="event" value="6">Fun<br />    
+<button onclick="conc(); makeCode()">Test</button>
+<input id="text" type="text" value="." style="width:80%" /><br />
+<p id="text1"></p>
+<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+<script type="text/javascript">
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+	width : 100,
+	height : 100
+});
+
+function makeCode () {		
+	var elText = document.getElementById("text");
+	
+	if (!elText.value) {
+		alert("Input a text");
+		elText.focus();
+		return;
+	}
+	
+	qrcode.makeCode(elText.value);
+}
+
+makeCode();
+
+$("#text").
+	on("input", function () {
+		makeCode();
+	}).
+	on("input", function (e) {
+		if (e.keyCode == 13) {
+			makeCode();
+		}
+	} );
+</script>
+<script type="text/javascript">
+	function conc() {
+		var reg = document.getElementById("regqr");
+		var val = document.getElementById("text");
+				var favorite = [];
+            $.each($("input[name='event']:checked"), function(){            
+                favorite.push($(this).val());
+            });
+											var val = document.getElementById("text");
+												var res = reg.value+"-"+favorite.join(",");
+												val.value = res;
+
+	}
+</script>
+</body>

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+									color: #fff;
+									background: #3598dc;
+									font-family: 'Roboto', sans-serif;
+								}
+								.qrbox-control{
+									height: 41px;
+									background: #f2f2f2;
+									box-shadow: none !important;
+									border: none;
+								}
+								.qrbox-control:focus{
+									background: #e2e2e2;
+								}
+								.qrbox-control, .btn{        
+									border-radius: 3px;
+								}
+								.signup-qrbox{
+									width: auto;
+									margin: 10px auto;
+								}
+								.signup-qrbox qrbox{
+									color: #999;
+									border-radius: 3px;
+									margin-bottom: 15px;
+									background: #fff;
+									box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+									padding: 30px;
+								}
+								.signup-qrbox h2 {
+									color: #333;
+									font-weight: bold;
+									margin-top: 0;
+								}
+								.signup-qrbox hr {
+									margin: 0 -30px 20px;
+								}    
+								.signup-qrbox .qrbox-group{
+									margin-bottom: 20px;
+								}
+								.signup-qrbox input[type="checkbox"]{
+									margin-top: 3px;
+								}
+								.signup-qrbox .row div:first-child{
+									padding-right: 10px;
+								}
+								.signup-qrbox .row div:last-child{
+									padding-left: 10px;
+								}
+								.signup-qrbox .btn{        
+									font-size: 16px;
+									font-weight: bold;
+									background: #3598dc;
+									border: none;
+									min-width: 140px;
+								}
+								.signup-qrbox .btn:hover, .signup-qrbox .btn:focus{
+									background: #2389cd !important;
+									outline: none;
+								}
+								.signup-qrbox a{
+									color: #fff;
+									text-decoration: underline;
+								}
+								.signup-qrbox a:hover{
+									text-decoration: none;
+								}
+								.signup-qrbox qrbox a{
+									color: #3598dc;
+									text-decoration: none;
+								}	
+								.signup-qrbox qrbox a:hover{
+									text-decoration: underline;
+								}
+							
